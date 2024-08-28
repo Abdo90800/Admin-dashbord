@@ -11,9 +11,10 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
-import { Avatar, styled, useTheme, Typography, Tooltip } from "@mui/material";
+import Avatar from "@mui/material/Avatar";
+import Typography from "@mui/material/Typography";
+import Tooltip from "@mui/material/Tooltip";
 import MuiDrawer from "@mui/material/Drawer";
-import { HomeOutlined } from "@mui/icons-material";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
@@ -28,7 +29,9 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import { useLocation, useNavigate } from "react-router-dom";
 import { grey } from "@mui/material/colors";
-
+import useTheme from "@mui/material/useTheme";
+import styled from "@mui/material/styled";
+import my from "../images/download.jpeg"
 const drawerWidth = 240;
 const openedMixin = (theme) => ({
   width: drawerWidth,
@@ -136,7 +139,7 @@ const SideBar = ({ open, handleDrawerClose }) => {
           transition: "0.25s",
         }}
         alt="Remy Sharp"
-        src="https://media.allure.com/photos/5a26c1d8753d0c2eea9df033/3:4/w_1262,h_1683,c_limit/mostbeautiful.jpg"
+        src={my}
       />
       <Typography
         align="center"
